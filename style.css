@@ -1,0 +1,88 @@
+.rate {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+    justify-content: center;
+}
+
+.rate:not(:checked) > input {
+    position: absolute;
+    width: 0;
+    height: 0;
+    top: 0;
+    left: 0;
+}
+
+.rate:not(:checked) > label:before {
+    content: '★';
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    left: 50%;
+}
+
+.rate:not(:checked) > label {
+    width: 47px;
+    height: 47px;
+    overflow: hidden;
+    white-space: nowrap;
+    cursor: pointer;
+    font-size: 30px;
+    color: #FFF;
+    margin-bottom: 0;
+    position: relative;
+    margin-right: 8px;
+    background-color: #E5E5E5;
+    border-radius: 2px;
+}
+.rate #star1Label:hover{
+    background-color: #ff3d3d;
+}
+.rate #star1Labe2:hover{
+    background-color: #ff723d;
+}
+.rate:not(:checked) > #star2Label:hover, .rate:not(:checked) > #star2Label:hover ~ label{
+    background-color: #ff723d ;
+}
+.rate #star1Labe3:hover{
+    background-color: #f7ee71;
+}
+.rate:not(:checked) > #star3Label:hover, .rate:not(:checked) > #star3Label:hover ~ label{
+    background-color: #f7ee71 ;
+}
+.rate #star1Labe4:hover{
+    background-color: #71f79f;
+}
+.rate:not(:checked) > #star4Label:hover, .rate:not(:checked) > #star4Label:hover ~ label{
+    background-color: #71f79f ;
+}
+.rate:not(:checked) > #star5Label:hover, .rate:not(:checked) > #star5Label:hover ~ label{
+    background-color: #50e181 ;
+}
+.rate #star1Labe5:hover{
+    background-color: #50e181;
+}
+
+.rate > #star1:checked ~ label {
+    background-color: #ff3d3d;
+}
+.rate > #star2:checked ~ label {
+    background-color: #ff723d;
+}
+.rate > #star3:checked ~ label {
+    background-color: #f7ee71;
+}
+.rate > #star4:checked ~ label {
+    background-color: #71f79f;
+}
+.rate > #star5:checked ~ label {
+    background-color: #50e181;
+}
